@@ -1,0 +1,9 @@
+{
+    "exp": 0,
+    "playCount": 0,
+    "clearArray": [
+        0,
+        0,
+        0
+    ]
+}
