@@ -51,9 +51,13 @@ public class MapUIController : MonoBehaviour
 		// SetUp Character Face Button
 		characterFace.SetClickableAgain();
 		characterFace.SetClickCallback(() => {
+			characterFace.IsLocked = true;
 			ballon.Show();
 		});
 		characterFace.IsLocked = false;
+		ballon.SetShowFinishedCallback(() => {
+			characterFace.IsLocked = false;
+		});
 
 		// SetUp Character and wish
 		characterFace.GetComponent<Image>().sprite = GameDataManager.Instance.CharacterFace;
