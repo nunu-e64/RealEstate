@@ -867,8 +867,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70, y: 54}
-  m_SizeDelta: {x: 800, y: 179}
+  m_AnchoredPosition: {x: -155, y: 62}
+  m_SizeDelta: {x: 657, y: 219}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &285742766
 MonoBehaviour:
@@ -894,7 +894,7 @@ MonoBehaviour:
     m_FontSize: 64
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 5
     m_MaxSize: 64
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2270,7 +2270,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 64
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2343,7 +2343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1406770414
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3378,7 +3378,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 162, y: -39}
+  m_AnchoredPosition: {x: 162, y: -47}
   m_SizeDelta: {x: 1644, y: 302}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1926544753
@@ -3402,17 +3402,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6ce584dcdfffa4af2804de0709d72235, type: 3}
-    m_FontSize: 64
+    m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 4
     m_MaxSize: 64
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.01
+    m_LineSpacing: 1
   m_Text: "\u3074\u308A\u308B\u308B\u308A\u301C\n\u3074\u3074\u3071\u308A\u308D\u3001\n\u3074\u308B\u3074\u3071\uFF01"
 --- !u!222 &1926544754
 CanvasRenderer:
