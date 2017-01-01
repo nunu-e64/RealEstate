@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class OpeningUIController : BaseUIController
 {
-	[SerializeField]	private Image spaceBackground;
 	[SerializeField]	private Image introBackground;
 	[SerializeField]	private BalloonWindow openingBalloon;
 	[SerializeField]	private BalloonWindow introBalloon;
@@ -29,7 +28,6 @@ public class OpeningUIController : BaseUIController
 	{
 		state = OpeningState.OPENING_SHOWING;
 
-		introBackground.gameObject.SetActive(false);
 		openingBalloon.gameObject.SetActive(false);
 		introBalloon.gameObject.SetActive(false);
 		wishBalloon.gameObject.SetActive(false);
@@ -38,15 +36,13 @@ public class OpeningUIController : BaseUIController
 		character.gameObject.SetActive(false);
 		characterNameWindow.gameObject.SetActive(false);
 
-		spaceBackground.gameObject.SetActive(true);
-
 		SetCharacterData();
 	}
 
 	private void SetCharacterData()
 	{
 		character.sprite = GameDataManager.Instance.CharacterSprite;
-		characterNameWindow.GetComponentInChildren<Text>().text = GameDataManager.Instance.CharacterName;
+		characterNameWindow.GetComponentInChildren<Text>().text = "依頼人：" + GameDataManager.Instance.CharacterName;
 		wishBalloon.GetComponentInChildren<Text>().text = GameDataManager.Instance.CharacterWish;
 
 		// TODO Intro comment
@@ -57,7 +53,7 @@ public class OpeningUIController : BaseUIController
 		if (state == OpeningState.OPENING_SHOW_FINISHED) {
 			if (InputManager.Instance.IsTouchBegan()) {
 				state = OpeningState.OPENING_SHOWING;
-				SwitchBackground();
+				ShowIntroduction();
 			}
 		}
 		if (state == OpeningState.INTRO_SHOW_FINISHED) {
@@ -81,14 +77,6 @@ public class OpeningUIController : BaseUIController
 			state = OpeningState.OPENING_SHOW_FINISHED;
 		});
 		openingBalloon.Show();
-	}
-
-	public void SwitchBackground()
-	{
-		introBackground.gameObject.SetActive(true);
-		introBackground.gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 0);
-		iTweenExt.FadeTo(spaceBackground.gameObject, iTween.Hash("from", 1, "to", 0, "time", 1.0f, "oncompletetarget", this.gameObject, "oncomplete", "ShowIntroduction"));
-		iTweenExt.FadeTo(introBackground.gameObject, 0, 1, 1.0f);
 	}
 
 	public void ShowIntroduction()
