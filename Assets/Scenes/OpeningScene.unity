@@ -362,8 +362,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f9c04a080ee2746668b5710465897068, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: f7b9d639a84aa48c1867ab1faba4e692, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -714,7 +714,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1314020765
 RectTransform:
   m_ObjectHideFlags: 0
@@ -753,8 +753,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5e65ecc2051ce4cd6a0ee27dd94ed30b, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: f7b9d639a84aa48c1867ab1faba4e692, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -830,9 +830,9 @@ RectTransform:
   m_RootOrder: 8
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -106.00006, y: 205.3927}
-  m_SizeDelta: {x: 1050, y: 703}
-  m_Pivot: {x: -0.000000011175871, y: 0.7110851}
+  m_AnchoredPosition: {x: -131, y: -144}
+  m_SizeDelta: {x: 1100, y: 619}
+  m_Pivot: {x: -0.000000011175871, y: 0.2421158}
 --- !u!114 &1371068181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,8 +852,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5472aa9fb82734b55b4ceda9136d202b, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 7ab166be2ccc445e2b4aaf3d3f94e6d1, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1071,7 +1071,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1629435144
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1155,8 +1155,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 59, y: 0}
-  m_SizeDelta: {x: 816, y: 703}
+  m_AnchoredPosition: {x: 39, y: 0}
+  m_SizeDelta: {x: 865, y: 619}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1770830525
 MonoBehaviour:
@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
