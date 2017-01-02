@@ -529,6 +529,7 @@ GameObject:
   - 222: {fileID: 414696705}
   - 114: {fileID: 414696704}
   - 114: {fileID: 414696703}
+  - 114: {fileID: 414696706}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -552,8 +553,8 @@ RectTransform:
   m_RootOrder: 7
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000083333, y: -567.32}
-  m_SizeDelta: {x: 420, y: 120}
+  m_AnchoredPosition: {x: -3, y: -559.99994}
+  m_SizeDelta: {x: 404, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &414696703
 MonoBehaviour:
@@ -659,8 +660,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c034e5bee86d940fdb2259e3efb47497, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 5e08779ca51dc4cab85667c289dceebc, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -673,6 +674,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 414696701}
+--- !u!114 &414696706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 414696701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a679c22e400fc4132a6f900669cbbe23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &448724434
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,7 +2344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2341,11 +2353,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6ce584dcdfffa4af2804de0709d72235, type: 3}
-    m_FontSize: 60
+    m_FontSize: 64
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
-    m_MaxSize: 60
+    m_MaxSize: 64
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
