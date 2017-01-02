@@ -1225,7 +1225,7 @@ GameObject:
   - 222: {fileID: 1194525637}
   - 114: {fileID: 1194525636}
   m_Layer: 5
-  m_Name: SCREEN
+  m_Name: LayoutImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
