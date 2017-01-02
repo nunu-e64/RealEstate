@@ -832,6 +832,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 1985221802}
+--- !u!114 &635856007 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010912824608, guid: ab09970a2f1f146b8b327e4ded41c204,
+    type: 2}
+  m_PrefabInternal: {fileID: 266927031}
+  m_Script: {fileID: 11500000, guid: 68610488dc4fc4aa3b8ef302f583d689, type: 3}
 --- !u!1 &639593080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,6 +1127,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 635856007}
+        m_MethodName: PlaySE2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: s-20_se
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &801946645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,7 +1226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &818388776
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1215,7 +1236,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0.008726558, w: 0.999962}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 137.0658}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20.795776}
   m_Children:
   - {fileID: 171926893}
   m_Father: {fileID: 1018730407}
@@ -1265,6 +1286,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 635856007}
+        m_MethodName: PlaySE2
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: s-21_se
           m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,

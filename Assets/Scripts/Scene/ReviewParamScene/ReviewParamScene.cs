@@ -13,7 +13,6 @@ public class ReviewParamScene : BaseScene<ReviewParamScene>
 	protected override void OnFadeInFinished()
 	{
 		uiEvent.Run(1);
-		AudioManager.Instance.PlaySE2("s-20_se");
 	}
 
 	protected override void OnFadeOutFinished()

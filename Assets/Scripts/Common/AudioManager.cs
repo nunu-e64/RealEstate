@@ -68,12 +68,15 @@ public class AudioManager : SingletonMonoBehaviour2<AudioManager>
 		AudioSource source = this.seSources.FirstOrDefault(s => !s.isPlaying);
 		if (source == null) {
 			if (this.seSources.Count >= this.MaxSE) {
-				Debug.Log("SE AudioSource is full");
+				Debug.LogWarning("SE AudioSource is full");
 				return;
 			}
 
 			source = this.gameObject.AddComponent<AudioSource>();
 			this.seSources.Add(source);
+			Debug.Log(string.Format("AudioManager: AddAudioSouce for [{0}]", seName));
+		} else {
+			Debug.Log(string.Format("AudioManager: ReuseAudioSouce for [{0}]", seName));
 		}
 
 		source.clip = this.seDict[seName];
