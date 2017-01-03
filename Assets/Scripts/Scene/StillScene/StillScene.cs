@@ -3,9 +3,11 @@
 public class StillScene : BaseScene<StillScene>
 {
 	public UIEvent uiEvent;
+	[SerializeField] private UnityEngine.UI.Image still;
 
 	protected override void Initialize()
 	{
+		still.sprite = GameDataManager.Instance.CharacterStill;
 		uiEvent.Run(0);
 	}
 
@@ -21,6 +23,6 @@ public class StillScene : BaseScene<StillScene>
 
 	public void MoveScene()
 	{
-		LoadScene("ReviewParamScene");
+		LoadScene(Global.REVIEW_PARAM_SCENE);
 	}
 }

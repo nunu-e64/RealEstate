@@ -11,7 +11,7 @@ public class UIReviewTextLoad : MonoBehaviour
 			GameDataManager.Instance.HouseIndex = 0;
 		}
 
-		Global.Grade grade = Global.GRADE_KVS[UserDataManager.Instance.PlayCount % Global.MAX_ALIEN][GameDataManager.Instance.HouseIndex];
+		Global.Grade grade = GameDataManager.Instance.GetGrade();
 		int id = GameDataManager.Instance.CharacterIndex + 1;
 		text.text = Resources.Load<TextAsset>(string.Format("Texts/review_character{0}_{1}", id, grade)).text;
 	}

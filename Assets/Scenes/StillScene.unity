@@ -120,6 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeSecs: 1
   uiEvent: {fileID: 140608319}
+  still: {fileID: 927384904}
 --- !u!4 &140608318
 Transform:
   m_ObjectHideFlags: 0

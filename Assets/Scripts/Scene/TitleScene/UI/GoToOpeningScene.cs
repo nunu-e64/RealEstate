@@ -5,7 +5,7 @@ public class GoToOpeningScene : MonoBehaviour
 	public void MoveScene()
 	{
 		Invoke("StopSE", 0.5f);
-		TitleScene.Instance.LoadScene("OpeningScene");
+		TitleScene.Instance.LoadScene(Global.OPENING_SCENE);
 	}
 
 	public void StopSE()
