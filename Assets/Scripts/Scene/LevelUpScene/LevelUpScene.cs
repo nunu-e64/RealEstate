@@ -2,10 +2,12 @@
 
 public class LevelUpScene : BaseScene<EndingScene>
 {
+	private bool isSePlaying = false;
+
 	protected override void Initialize()
 	{
 		Debug.Log("初期化");
-		UserDataManager.Instance.Count();
+		UserDataManager.Instance.IncrementPlayerCount();
 		UserDataManager.Instance.Save();
 		AudioManager.Instance.PlayBGM("s-19_bgm");
 	}
@@ -35,7 +37,9 @@ public class LevelUpScene : BaseScene<EndingScene>
 	public void GoNextScene()
 	{
 		LoadScene(Global.TITLE_SCENE);
-		AudioManager.Instance.PlaySE2("s-3_se");
-
+		if (!isSePlaying) {
+			AudioManager.Instance.PlaySE2("s-3_se");
+			isSePlaying = true;
+		}
 	}
 }

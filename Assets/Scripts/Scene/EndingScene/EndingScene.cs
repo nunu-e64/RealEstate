@@ -27,7 +27,7 @@ public class EndingScene : BaseScene<EndingScene>
 			return;
 		}
 		if (Input.GetMouseButtonDown(0)) {
-			LoadScene(Global.LEVEL_UP_SCENE);
+			LoadScene(Global.TITLE_SCENE);
 		}
 	}
 

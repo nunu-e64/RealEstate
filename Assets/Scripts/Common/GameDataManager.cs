@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GameDataManager : PersistentSingletonMonoBehaviour<GameDataManager>
 {
-	private int characterIndex = -1;
+	private int characterIndex = 0;
 	// characterIndex : 0-2
 	private int houseIndex = 0;
 	// houseIndex : 0-5
@@ -26,7 +26,7 @@ public class GameDataManager : PersistentSingletonMonoBehaviour<GameDataManager>
 
 	public int CharacterIndex {
 		get {
-			characterIndex = UserDataManager.Instance.PlayCount % 3;
+			characterIndex = UserDataManager.Instance.PlayCount % Global.MAX_ALIEN;
 			return characterIndex; 
 		}
 	}
