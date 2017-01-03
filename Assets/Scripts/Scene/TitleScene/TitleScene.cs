@@ -21,9 +21,4 @@ public class TitleScene : BaseScene<TitleScene>
 	{
 		LoadScene(Global.MAP_SCENE);
 	}
-
-	public void SetPlayCount(int count)
-	{
-		UserDataManager.Instance.PlayCount = count;
-	}
 }
