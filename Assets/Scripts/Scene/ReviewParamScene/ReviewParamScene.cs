@@ -22,7 +22,7 @@ public class ReviewParamScene : BaseScene<ReviewParamScene>
 
 	public void MoveScene()
 	{
-		Global.Grade grade = Global.GRADE_KVS[UserDataManager.Instance.PlayCount % Global.MAX_ALIEN][GameDataManager.Instance.HouseIndex];
+		Global.Grade grade = GameDataManager.Instance.GetGrade();
 		if (grade == Global.Grade.A) {
 			LoadScene(Global.ENDING_SCENE);
 		} else {
