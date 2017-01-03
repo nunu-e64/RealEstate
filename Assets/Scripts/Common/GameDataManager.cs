@@ -75,6 +75,13 @@ public class GameDataManager : PersistentSingletonMonoBehaviour<GameDataManager>
 		}
 	}
 
+	public Sprite CharacterStill {
+		get {
+			string spritePath = Global.PATH_TO_CHARACTER + "/still" + (CharacterIndex + 1);
+			return Resources.Load<Sprite>(spritePath);
+		}
+	}
+
 	public string CharacterMapComment {
 		get { 
 			string charaFile = "character" + (CharacterIndex + 1);
@@ -98,6 +105,12 @@ public class GameDataManager : PersistentSingletonMonoBehaviour<GameDataManager>
 			reviewSprite = Resources.Load<Sprite>(spritePath);
 			return reviewSprite;
 		}
+	}
+
+	public Global.Grade GetGrade()
+	{
+		Global.Grade grade = Global.GRADE_KVS[CharacterIndex][HouseIndex];
+		return grade;
 	}
 
 	public void Start()

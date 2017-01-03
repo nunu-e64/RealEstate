@@ -22,6 +22,6 @@ public class ResultScene : BaseScene<ResultScene>
 
 	public void MoveScene()
 	{
-		LoadScene("ReviewScene");
+		LoadScene(Global.REVIEW_SCENE);
 	}
 }

@@ -11,7 +11,7 @@ public class UIReviewStampLoad : MonoBehaviour
 			GameDataManager.Instance.HouseIndex = 0;
 		}
 
-		Global.Grade grade = Global.GRADE_KVS[UserDataManager.Instance.PlayCount % Global.MAX_ALIEN][GameDataManager.Instance.HouseIndex];
+		Global.Grade grade = GameDataManager.Instance.GetGrade();
 		image.sprite = Resources.Load<Sprite>(string.Format("Images/Stamp/Stamp{0}", grade));
 	}
 }
