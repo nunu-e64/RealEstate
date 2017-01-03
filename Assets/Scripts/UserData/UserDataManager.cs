@@ -47,7 +47,7 @@ public class UserDataManager : PersistentSingletonMonoBehaviour<UserDataManager>
 		saveData.exp += exp;
 	}
 
-	public void Count()
+	public void IncrementPlayerCount()
 	{
 		saveData.playCount++;
 	}
@@ -86,5 +86,12 @@ public class UserDataManager : PersistentSingletonMonoBehaviour<UserDataManager>
 			saveData = new SaveData();
 			Debug.LogError("Could not find user data.");
 		}
+	}
+
+	public void RandomizePlayerCount()
+	{
+		int oldCount = saveData.playCount;
+		saveData.playCount = UnityEngine.Random.Range(0, Global.MAX_ALIEN);
+		Debug.Log(string.Format("RandomizPlayerCount: {0} to {1}", oldCount, saveData.playCount));
 	}
 }

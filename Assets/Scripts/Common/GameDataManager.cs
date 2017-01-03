@@ -26,7 +26,7 @@ public class GameDataManager : PersistentSingletonMonoBehaviour<GameDataManager>
 
 	public int CharacterIndex {
 		get {
-			characterIndex = UserDataManager.Instance.PlayCount % 3;
+			characterIndex = UserDataManager.Instance.PlayCount % Global.MAX_ALIEN;
 			return characterIndex; 
 		}
 	}
