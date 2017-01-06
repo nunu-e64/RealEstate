@@ -23,6 +23,6 @@ public class StillScene : BaseScene<StillScene>
 
 	public void MoveScene()
 	{
-		LoadScene(Global.REVIEW_PARAM_SCENE);
+		LoadScene(Global.ENDING_SCENE);
 	}
 }

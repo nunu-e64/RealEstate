@@ -24,7 +24,7 @@ public class ReviewParamScene : BaseScene<ReviewParamScene>
 	{
 		Global.Grade grade = GameDataManager.Instance.GetGrade();
 		if (grade == Global.Grade.A) {
-			LoadScene(Global.ENDING_SCENE);
+			LoadScene(Global.STILL_SCENE);
 		} else {
 			LoadScene(Global.TITLE_SCENE);
 		}
