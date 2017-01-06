@@ -10,10 +10,9 @@ public class TryShowStill : UIIF
 		Global.Grade grade = GameDataManager.Instance.GetGrade();
 		if (grade == Global.Grade.A) {
 			UserDataManager.Instance.GameClear(1);
-			Run(true);
 		} else {
 			UserDataManager.Instance.GameOver(1);
-			Run(false);
 		}
+		Run(false);
 	}
 }
