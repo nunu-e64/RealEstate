@@ -7,8 +7,6 @@ public class LevelUpScene : BaseScene<EndingScene>
 	protected override void Initialize()
 	{
 		Debug.Log("初期化");
-		UserDataManager.Instance.IncrementPlayerCount();
-		UserDataManager.Instance.Save();
 		AudioManager.Instance.PlayBGM("s-19_bgm");
 	}
 
