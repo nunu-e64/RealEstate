@@ -59,8 +59,7 @@ public abstract class BaseScene<T> : SingletonMonoBehaviour<T> where T : MonoBeh
 		// Put logic to run after screen fades out (after scene is hide) here
 	}
 
-	public void LoadScene(string sceneName)
-	{
+	public void LoadScene(string sceneName) {
 		if (loadSceneRequested) {
 			return;
 		}
@@ -69,5 +68,10 @@ public abstract class BaseScene<T> : SingletonMonoBehaviour<T> where T : MonoBeh
 			OnFadeOutFinished();
 			SceneManager.LoadScene(sceneName);
 		});
+
+		if (sceneName == Global.TITLE_SCENE) {
+			UserDataManager.Instance.IncrementPlayerCount();
+			UserDataManager.Instance.Save();
+		}
 	}
 }

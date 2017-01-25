@@ -49,7 +49,20 @@ public class UserDataManager : PersistentSingletonMonoBehaviour<UserDataManager>
 
 	public void IncrementPlayerCount()
 	{
-		saveData.playCount++;
+		// リリア→ポロ→カイト想定だったのが、リリア→カイト→ポロに変わったため、ファイル修正を回避するためにここのIndex変化を修正する
+		//saveData.playCount++;
+		var prev = saveData.playCount;
+		if (saveData.playCount == 0) {
+			saveData.playCount = 2;
+		} else if (saveData.playCount == 2) {
+			saveData.playCount = 1;
+		} else if (saveData.playCount == 1) {
+			saveData.playCount = 0;
+		} else {
+			Debug.LogWarningFormat(string.Format("unexpected playcount {0}", saveData.playCount));
+			saveData.playCount = 0;
+		}
+		Debug.Log(string.Format("PlayerCount {0} to {1}", prev, saveData.playCount));
 	}
 
 	private void Awake()

@@ -1,14 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class TitleUIController : MonoBehaviour
 {
 
 	[SerializeField] private GameObject optionPanel;
 	[SerializeField] private GameObject randomButton;
+	[SerializeField] private GameObject orderButton;
 	[SerializeField] private GameObject[] selectCharacterButtons;
 
-	private bool isRandomMode = true;
+	private bool isRandomMode = false;
+	private List<Button> optionButtons;
 
 	public void Start()
 	{
@@ -16,6 +20,13 @@ public class TitleUIController : MonoBehaviour
 		Debug.Assert(randomButton != null);
 		Debug.Assert(selectCharacterButtons.Length == 3);
 		optionPanel.SetActive(false);
+
+		optionButtons = new List<Button>();
+		optionButtons.Add(randomButton.GetComponent<Button>());
+		optionButtons.Add(orderButton.GetComponent<Button>());
+		foreach (var button in selectCharacterButtons) {
+			optionButtons.Add(button.GetComponent<Button>());
+		}
 
 		SetupButtonStatus();
 	}
@@ -26,14 +37,14 @@ public class TitleUIController : MonoBehaviour
 			ChangeButtonVisible(randomButton);
 		} else {
 			ChangeButtonVisible(selectCharacterButtons[GameDataManager.Instance.CharacterIndex]);
+			orderButton.GetComponent<Button>().interactable = false;
 		}
 	}
 
 	public void ChangeButtonVisible(GameObject exception)
 	{
-		randomButton.GetComponent<UnityEngine.UI.Button>().interactable = true;
-		foreach (var button in selectCharacterButtons) {
-			button.GetComponent<UnityEngine.UI.Button>().interactable = true;
+		foreach (var button in optionButtons) {
+			button.interactable = true;
 		}
 		exception.GetComponent<UnityEngine.UI.Button>().interactable = false;
 	}
@@ -58,6 +69,12 @@ public class TitleUIController : MonoBehaviour
 	{
 		isRandomMode = true;
 		ChangeButtonVisible(randomButton);
+	}
+
+	public void SwitchOrder() {
+		isRandomMode = false;
+		ChangeButtonVisible(orderButton);
+		selectCharacterButtons[GameDataManager.Instance.CharacterIndex].GetComponent<Button>().interactable = false;
 	}
 
 	public void SetupPlayerCount()
